@@ -1,0 +1,32 @@
+package com.yc;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/login")
+public class Login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		// String n = (String) request.getAttribute("n");
+		int n = (int) request.getSession().getAttribute("n");
+		String c = request.getParameter("c");
+		if (c.equals(n+"")) {// 验证码正确
+			System.out.println("ok");
+
+		} else {
+			System.out.println("err");
+		}
+	}
+
+}
