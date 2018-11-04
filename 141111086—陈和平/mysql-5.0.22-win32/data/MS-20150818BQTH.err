@@ -1,0 +1,33 @@
+160114 10:33:36  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160114 10:33:36  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2049397.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2049397
+160114 10:33:36  InnoDB: Started; log sequence number 0 2049397
+160114 10:33:36 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+160114 14:03:46  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160114 14:03:47  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2808003.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2808003
+160114 14:03:47  InnoDB: Started; log sequence number 0 2808003
+160114 14:03:47 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+160114 17:22:09  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160114 17:22:09  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2808013.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2808013
+160114 17:22:09  InnoDB: Started; log sequence number 0 2808013
+160114 17:22:09 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)

@@ -1,0 +1,53 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chenheping.DAO.AdminMapper" >
+    <resultMap id="BaseResultMap" type="com.chenheping.domin.Admin" >
+        <id column="admin_id" property="admin_id" jdbcType="INTEGER" />
+        <result column="a_username" property="a_username" jdbcType="VARCHAR" />
+        <result column="a_name" property="a_name" jdbcType="VARCHAR" />
+        <result column="a_password" property="a_password" jdbcType="VARCHAR" />
+        <result column="a_lasttime" property="a_lasttime" jdbcType="TIMESTAMP" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        admin_id, a_username, a_name, a_password, a_lasttime
+    </sql>
+    <!-- 根据管理员ID查询管理员信息-->
+    <select id="selectByAdminId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from admin
+        where admin_id = #{admin_id,jdbcType=INTEGER}
+    </select>
+
+
+    <!-- 查询所有管理员信息-->
+    <select id="selectAllAdmin" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from admin
+    </select>
+    <!--根据用户名和密码查询管理员-->
+    <select id="selectByUsernameAndPassword" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from admin
+        WHERE a_username = #{username} AND a_password = #{password}
+    </select>
+
+
+    <!-- 根据管理员id删除管理员-->
+    <delete id="deleteByAdminId" parameterType="java.lang.Integer" >
+        delete from admin
+        where admin_id = #{admin_id,jdbcType=INTEGER}
+    </delete>
+
+    <!--添加管理员信息-->
+    <insert id="insert" parameterType="com.chenheping.domin.Admin" >
+        insert into admin (admin_id, a_username, a_name, a_password,
+        a_lasttime)
+        values (#{admin_id,jdbcType=INTEGER}, #{a_username,jdbcType=INTEGER},#{a_name,jdbcType=VARCHAR}, #{a_password,jdbcType=VARCHAR},
+        #{a_lasttime,jdbcType=TIMESTAMP})
+    </insert>
+
+</mapper>
+

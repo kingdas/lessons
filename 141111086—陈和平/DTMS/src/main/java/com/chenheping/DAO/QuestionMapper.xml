@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chenheping.DAO.QuestionMapper" >
+    <resultMap id="BaseResultMap" type="com.chenheping.domin.Question" >
+        <id column="question_id" property="question_id" jdbcType="INTEGER" />
+        <result column="q_name" property="q_name" jdbcType="VARCHAR" />
+        <result column="answer_a" property="answer_a" jdbcType="VARCHAR" />
+        <result column="answer_b" property="answer_b" jdbcType="VARCHAR" />
+        <result column="answer_c" property="answer_c" jdbcType="VARCHAR" />
+        <result column="answer_d" property="answer_d" jdbcType="VARCHAR" />
+        <result column="right_key" property="right_key" jdbcType="VARCHAR" />
+        <result column="subjectparse" property="subjectparse" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+         question_id,q_name,q_item,answer_a,answer_b,answer_c,answer_d,right_key,subjectparse
+    </sql>
+    <!-- 根据管理员ID查询管理员信息-->
+    <select id="selectByQuestionId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from question
+        where question_id = #{question_id,jdbcType=INTEGER}
+    </select>
+
+
+    <!-- 查询所有管理员信息-->
+    <select id="selectAllQuestion" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from question
+    </select>
+
+
+    <!-- 根据管理员id删除管理员-->
+    <delete id="deleteByQuestionId" parameterType="java.lang.Integer" >
+        delete from question
+        where question_id = #{question_id,jdbcType=INTEGER}
+    </delete>
+
+    <!--添加管理员信息-->
+    <insert id="insert" parameterType="com.chenheping.domin.Question" >
+        insert into question (question_id,q_name,q_item,answer_a,answer_b,
+        answer_c,answer_d,right_key,subjectparse)
+        values (#{question_id,jdbcType=INTEGER}, #{q_name,jdbcType=VARCHAR},
+        #{q_item,jdbcType=VARCHAR},#{answer_a,jdbcType=VARCHAR},
+        #{answer_b,jdbcType=VARCHAR},#{answer_c,jdbcType=VARCHAR},
+        #{answer_d,jdbcType=VARCHAR},#{right_key,jdbcType=VARCHAR},
+        #{subjectparse,jdbcType=VARCHAR})
+    </insert>
+
+</mapper>
+

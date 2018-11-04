@@ -1,0 +1,73 @@
+160616 19:20:27  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160616 19:20:27  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2808013.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2808013
+160616 19:20:27  InnoDB: Started; log sequence number 0 2808013
+160616 19:20:27 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+160616 19:24:01  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: Some operating system error numbers are described at
+InnoDB: http://dev.mysql.com/doc/mysql/en/Operating_System_error_codes.html
+InnoDB: File name .\ibdata1
+InnoDB: File operation call: 'open'.
+InnoDB: Cannot continue operation.
+160617  9:24:24  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160617  9:24:24  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2808023.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2808023
+160617  9:24:24  InnoDB: Started; log sequence number 0 2808023
+160617  9:24:24 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+160617  9:24:30  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: Some operating system error numbers are described at
+InnoDB: http://dev.mysql.com/doc/mysql/en/Operating_System_error_codes.html
+InnoDB: File name .\ibdata1
+InnoDB: File operation call: 'open'.
+InnoDB: Cannot continue operation.
+160618 13:27:21  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160618 13:27:21  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2808033.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2808033
+160618 13:27:21  InnoDB: Started; log sequence number 0 2808033
+160618 13:27:21 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+160618 13:27:25  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: Some operating system error numbers are described at
+InnoDB: http://dev.mysql.com/doc/mysql/en/Operating_System_error_codes.html
+InnoDB: File name .\ibdata1
+InnoDB: File operation call: 'open'.
+InnoDB: Cannot continue operation.
+160620 11:03:40  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160620 11:03:40  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2808043.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2808043
+160620 11:03:40  InnoDB: Started; log sequence number 0 2808043
+160620 11:03:40 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+160620 19:10:48  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160620 19:10:48  InnoDB: Starting log scan based on checkpoint at
+InnoDB: log sequence number 0 2808043.
+InnoDB: Doing recovery: scanned up to log sequence number 0 2808043
+160620 19:10:48  InnoDB: Started; log sequence number 0 2808043
+160620 19:10:48 [Note] mysqld: ready for connections.
+Version: '5.0.22-community'  socket: ''  port: 3306  MySQL Community Edition (GPL)

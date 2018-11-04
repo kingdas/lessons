@@ -1,0 +1,47 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chenheping.DAO.ExamMapper" >
+    <resultMap id="BaseResultMap" type="com.chenheping.domin.Exam" >
+        <id column="exam_id" property="exam_id" jdbcType="INTEGER" />
+        <result column="student_id" property="student_id" jdbcType="INTEGER" />
+        <result column="e_score" property="e_score" jdbcType="VARCHAR" />
+        <result column="e_time" property="e_time" jdbcType="TIMESTAMP" />
+        <result column="e_truenum" property="e_truenum" jdbcType="VARCHAR" />
+        <result column="e_falsenum" property="e_falsenum" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        exam_id,student_id,e_score,e_time,e_truenum,e_falsenum
+    </sql>
+    <!-- 根据考试ID查询考试信息-->
+    <select id="selectByStuId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from exam
+        where student_id = #{student_id,jdbcType=INTEGER}
+    </select>
+
+
+    <!-- 查询所有考试信息-->
+    <select id="selectAllExam" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from exam
+    </select>
+
+
+    <!-- 根据考试id删除考试记录-->
+    <delete id="deleteByExamId" parameterType="java.lang.Integer" >
+        delete from exam
+        where exam_id = #{exam_id,jdbcType=INTEGER}
+    </delete>
+
+    <!--添加考试记录信息-->
+    <insert id="insert" parameterType="com.chenheping.domin.Exam" >
+        insert into exam (exam_id,student_id,e_score,e_time,e_truenum,e_falsenum)
+        values (#{exam_id,jdbcType=INTEGER}, #{student_id,jdbcType=INTEGER},
+        #{e_score,jdbcType=VARCHAR},
+        #{e_time,jdbcType=TIMESTAMP}, #{e_truenum,jdbcType=VARCHAR},#{e_falsenum,jdbcType=VARCHAR})
+    </insert>
+
+</mapper>
+

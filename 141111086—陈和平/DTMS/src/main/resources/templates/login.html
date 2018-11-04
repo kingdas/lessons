@@ -1,0 +1,45 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+<body>
+<div class="login">
+    <div class="login_title">
+        <p>师院驾校管理系统</p>
+    </div>
+    <div class="login_main">
+        <div class="main_left"></div>
+        <div class="main_right">
+            <div class="right_title">用户登录</div>
+            <div class="username" style="position: relative;">
+                <img src="../img/username.png" alt="">
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="password" style="position: relative;">
+                <img src="../img/password.png" alt="">
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="code" style="position: relative;">
+                <img src="../img/code.png" alt="">
+                <input style="width: 150px" type="text" id="usercode" placeholder="请输入验证码">
+                <div class="code_img" id="code_img" onclick="change()">
+                </div>
+            </div>
+            <div class="button" style="position: relative;">
+                <div class="yes_login" id="logining"><a >登&nbsp;&nbsp;&nbsp;&nbsp;录</a></div>
+                <div class="yes_login" ><a >注&nbsp;&nbsp;&nbsp;&nbsp;册</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="login_footer">
+        <p class="name">商丘师范学院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;豫ICP：豫B2-20170028</p>
+        <p>联系电话：18588888888&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0370-2888888</p>
+        <p>建议浏览器：IE9以上、Firefox v22</p>
+    </div>
+</div>
+<script type="text/javascript" src="../js/login.js"></script>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+</body>
+</html>

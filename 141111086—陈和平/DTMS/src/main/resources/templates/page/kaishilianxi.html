@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/lianxi.css">
+</head>
+<body >
+<div class="head">
+    <div class="head_check" align="center">
+        <table class="tt">
+            <tr >
+                <td style="white: 100px" align="center">
+                    <a id="uname"></a>
+                </td>
+                <td style="white: 100px" align="center">
+                    <a id="exit">退出</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="wrap">
+    <div class="logo" id="logo">
+        <div class="geren" style="width: 100%;height: 100px">
+            <h1 style="font-size:30px;color:#930;text-align:center;height: 100px">在线练习</h1>
+        </div>
+        <div class="question">
+            <div class="question_A" >
+                <div class="question_AA">
+                    <span class="question-name" id="q_name"></span>
+                </div>
+                <div class="answer-w">
+                    <input type="radio" name="cusans" value="a">&nbsp;<span class="check" id="check_a">A、正确</span>
+                    <br>
+                    <br>
+                    <input type="radio" name="cusans" value="b">&nbsp;<span class="check" id="check_b">B、错误</span>
+                    <br>
+                    <br>
+                </div>
+                <div class="answer-w" id="bd" style="clear: both">
+                    <input type="radio" name="cusans" value="c">&nbsp;<span class="check" id="check_c">A、正确</span>
+                    <br>
+                    <br>
+                    <input type="radio" name="cusans" value="d">&nbsp;<span class="check" id="check_d">B、错误</span>
+                    <br>
+                    <br>
+
+
+                </div>
+            </div>
+            <div class="option-type-msg">
+                <span id="type"></span>
+            </div>
+        </div>
+        <div class="butt" >
+            <div class="butt_A">
+                <div class="butt_AA">
+                    <div id="butt_shang" class="login_click">
+                        <button id="shang" href="#">上&nbsp;&nbsp;一&nbsp;&nbsp;题</button>
+                    </div>
+                    <div id="butt_xia" class="login_click">
+                        <button id="xia" href="#">下&nbsp;&nbsp;一&nbsp;&nbsp;题</button>
+                    </div>
+                    <div id="butt_xiangxi" class="login_click">
+                        <button id="xiangqing" href="#">显示详情</button>
+                    </div>
+                </div>
+                <div class="butt_BB">
+                    <span class="gray">答对：</span>
+                    <span class="count-right" id="trueques">0&nbsp;题&nbsp;&nbsp;</span>
+                    <span class="gray">答错：</span>
+                    <span class="count-wrong" id="falesques">0&nbsp;题&nbsp;&nbsp;</span>
+                    <span class="gray">正确率：</span>
+                    <span class="rate_right" id="zhengquelv">0%</span>
+                </div>
+                <div id="xqmas"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav-main">
+    <div class="nav-box">
+        <div class="nav">
+            <ul class="nav-ul">
+                <li><a href="index" class="home"><span>首页</span></a></li>
+                <li><a href="#" class="develop"><span>个人信息</span></a></li>
+                <li><a href="#" class="wechat"><span>在线练习</span></a></li>
+                <li><a href="#" class="case"><span>场地练习</span></a></li>
+                <li><a href="#" class="news"><span>信息资讯</span></a></li>
+                <li><a href="guanyuwomen" class="contact"><span>关于我们</span></a></li>
+            </ul>
+        </div>
+        <div class="nav-slide">
+            <div class="nav-slide-o"></div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="gerenxinxi" ><span>个人信息查看</span></a></li>
+                    <li><a href="gerenxinxixiugai" ><span>个人信息修改</span></a></li>
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="kaishilianxi"><span>开始练习</span></a></li>
+                    <li><a href="lishijieguo"><span>历史结果</span></a></li>
+                    <li><a href="moniceshi"><span>模拟测试</span></a></li>
+                    <li><a href="ceshijieguo"><span>模拟测试记录</span></a></li>
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="kemuer"><span>科目二</span></a></li>
+                    <li><a href="kemusan"><span>科目三</span></a></li>
+
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="zuixinhuodong"><span>最新活动</span></a></li>
+                    <li><a href="kaoshijiebao"><span>考试捷报</span></a></li>
+                    <li><a href="fangjiatongzhi"><span>放假通知</span></a></li>
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/kaishilianxi.js"></script>
+<script type="text/javascript">
+    document.getElementById("butt_xiangxi").onclick = function () {
+        console.log(quelist[queindex-1]);
+        document.getElementById("xqmas").innerHTML = "答案解析："+quelist[queindex-1].subjectparse;
+    }
+
+    $(function(){
+        var thisTime;
+        $('.nav-ul li').mouseleave(function(even){
+            thisTime	=	setTimeout(thisMouseOut,1000);
+        })
+
+        $('.nav-ul li').mouseenter(function(){
+            clearTimeout(thisTime);
+            var thisUB	=	$('.nav-ul li').index($(this));
+            if($.trim($('.nav-slide-o').eq(thisUB).html()) != "")
+            {
+                $('.nav-slide').addClass('hover');
+                $('.nav-slide-o').hide();
+                $('.nav-slide-o').eq(thisUB).show();
+            }
+            else{
+                $('.nav-slide').removeClass('hover');
+            }
+
+        })
+
+        function thisMouseOut(){
+            $('.nav-slide').removeClass('hover');
+        }
+
+        $('.nav-slide').mouseenter(function(){
+            clearTimeout(thisTime);
+            $('.nav-slide').addClass('hover');
+        })
+        $('.nav-slide').mouseleave(function(){
+            $('.nav-slide').removeClass('hover');
+        })
+
+    })
+</script>
+
+<script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+</html>

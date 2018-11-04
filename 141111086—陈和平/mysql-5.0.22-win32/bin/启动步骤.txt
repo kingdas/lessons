@@ -1,0 +1,9 @@
+----------MYSQL∆Ù∂Ø≤Ω÷Ë---------
+mysqld --character-set-server=gbk
+
+mysql --default-character-set=gbk -u root -p
+root
+∆Ù∂Ø tomcat
+admin
+admin0217
+http://localhost:8080/tarenaExam/login.jsp

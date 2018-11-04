@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+</head>
+<body>
+<div class="head">
+    <div class="head_check" align="center">
+        <table class="tt">
+            <tr >
+                <td style="white: 100px" align="center">
+                    <a id="uname"></a>
+                </td>
+                <td style="white: 100px" align="center">
+                    <a href="login.html" >退出</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="wrap">
+    <div class="logo" id="logo">
+
+
+    </div>
+</div>
+<div class="nav-main">
+    <div class="nav-box">
+        <div class="nav">
+            <ul class="nav-ul">
+                <li><a href="index" class="home"><span>首页</span></a></li>
+                <li><a href="#" class="develop"><span>个人信息</span></a></li>
+                <li><a href="#" class="wechat"><span>在线练习</span></a></li>
+                <li><a href="#" class="case"><span>场地练习</span></a></li>
+                <li><a href="#" class="news"><span>信息资讯</span></a></li>
+                <li><a href="guanyuwomen" class="contact"><span>关于我们</span></a></li>
+            </ul>
+        </div>
+        <div class="nav-slide">
+            <div class="nav-slide-o"></div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="gerenxinxi" ><span>个人信息查看</span></a></li>
+                    <li><a href="gerenxinxixiugai" ><span>个人信息修改</span></a></li>
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="kaishilianxi"><span>开始练习</span></a></li>
+                    <li><a href="lishijieguo"><span>历史结果</span></a></li>
+                    <li><a href="moniceshi"><span>模拟测试</span></a></li>
+                    <li><a href="ceshijieguo"><span>模拟测试记录</span></a></li>
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="kemuer"><span>科目二</span></a></li>
+                    <li><a href="kemusan"><span>科目三</span></a></li>
+
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+            <div class="nav-slide-o">
+                <ul>
+                    <li><a href="zuixinhuodong"><span>最新活动</span></a></li>
+                    <li><a href="kaoshijiebao"><span>考试捷报</span></a></li>
+                    <li><a href="fangjiatongzhi"><span>放假通知</span></a></li>
+                    <!--<li><a href="#"><span>XXXXX</span></a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var thisTime;
+        $('.nav-ul li').mouseleave(function(even){
+            thisTime	=	setTimeout(thisMouseOut,1000);
+        })
+
+        $('.nav-ul li').mouseenter(function(){
+            clearTimeout(thisTime);
+            var thisUB	=	$('.nav-ul li').index($(this));
+            if($.trim($('.nav-slide-o').eq(thisUB).html()) != "")
+            {
+                $('.nav-slide').addClass('hover');
+                $('.nav-slide-o').hide();
+                $('.nav-slide-o').eq(thisUB).show();
+            }
+            else{
+                $('.nav-slide').removeClass('hover');
+            }
+
+        })
+
+        function thisMouseOut(){
+            $('.nav-slide').removeClass('hover');
+        }
+
+        $('.nav-slide').mouseenter(function(){
+            clearTimeout(thisTime);
+            $('.nav-slide').addClass('hover');
+        })
+        $('.nav-slide').mouseleave(function(){
+            $('.nav-slide').removeClass('hover');
+        })
+
+    })
+</script>
+
+<script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+</html>
